@@ -1,0 +1,210 @@
+:root{
+    --verde-claro: #DAFDBA;
+    --verde2: #9AEBA3;
+    --azul-aqua: #45C4B0;
+    --azul-oscuro: #13678A;
+    --azul-mas-oscuro: #012030;}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.dancing {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 300; 
+  font-style: normal;
+}
+html{font-size: 62.5%}
+body{font-size: 16px;
+font-family: "Dancing Script", cursive;
+background-image: linear-gradient(to top, #45C4B0 0%,  #DAFDBA 100% );
+}
+
+h1{
+    text-align: center;
+    font-size: 2rem;
+    width: 3.8rem;
+}
+h1,h2,h3{
+    text-align: center;
+}
+span{
+    font-size: 2rem;
+}
+.titulo{
+    text-align: center;
+    font-size: 3.8rem;
+    color: var(--azul-oscuro);
+}
+.titulo span{
+    font-size: 2rem;
+    color: var(--azul-mas-oscuro);
+}
+.contenedor{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+.nav-bg{
+ background-color: var(--azul-oscuro);
+}
+
+.navegacion-principal{
+     padding: 1rem;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .navegacion-principal{
+    flex-direction: row; 
+  }
+}
+
+
+.navegacion-principal{
+    padding: 1.5rem;
+    background-color: var(--azul-oscuro);
+}
+.navegacion-principal a{
+    color: var(--verde-claro);
+    text-decoration: none;
+}
+.navegacion-principal a:hover{
+    color: var(--verde2);
+    font-size: 2rem;
+    background-color: var(--verde-claro);
+    font-weight: 900;
+
+}
+.hero{
+    background-image: url(../img/SHREK.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 550px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.contenido-hero{
+    position: absolute;
+    background-color:#13668a62;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenido-hero .ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
+.contenido-hero h2{
+    color: aliceblue;
+}
+.contenido-hero p{
+    color: var(--);
+}
+.boton{
+    background-color: var(--azul-oscuro);
+    color: var(--verde-claro);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+.boton:hover{
+    background-color: #45C4B0;
+    color: #13678A;
+}
+.sombra{ 
+    background-color: #45C4B0;
+    padding: 2rem;
+}
+.servicios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-content: center;
+}
+.servicio {
+  background-color: rgba(255, 255, 255, 0.232);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.servicio h3{
+    color: var(--verde-claro);
+}
+.servicio p{
+    line-height: 2;
+    text-align: center;
+}
+
+.servicio .icono{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--verde-claro);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.servicio img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.servicio img:hover {
+  transform: scale(1.15) rotate(2deg);
+}
+.servicio {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+}
+.servicio p {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.servicio:hover p {
+  opacity: 1;
+}
+.contenido-hero h2 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: subir 1s ease forwards;
+}
+
+
+
+.contenido-hero p {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: subir 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes subir {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
